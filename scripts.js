@@ -6,9 +6,9 @@ let roundCount = 0;
 
 // VIEW
 const playerChoiceFunctions = [
-    function () { return "charizard"; },
-    function () { return "blastoise"; },
-    function () { return "venusaur"; }
+    function () { return "Charizard"; },
+    function () { return "Blastoise"; },
+    function () { return "Venusaur"; }
 ]
 
 // CONTROLLER
@@ -28,10 +28,11 @@ function getComputerChoice() {
 
 function playRound(compChoice, playerChoice) {
     let comp = compChoice.toLowerCase();
-    let player = playerChoice;
+    let player = playerChoice.toLowerCase();
     printPlayerChoice(playerChoice);
     printCompChoice(compChoice);
     if (comp === player) {
+        printResult[0]();
         console.log("Computer chose: " + comp);
         console.log("TIED!")
         console.log("Computer score: " + compScore + " | Player score: " + playerScore);
@@ -40,11 +41,13 @@ function playRound(compChoice, playerChoice) {
         (comp === "venusaur" && player === "blastoise") ||
         (comp === "blastoise" && player === "charizard")
     ) {
+        printResult[1]();
         console.log("Computer chose: " + comp);
         console.log("COMPUTER WINS!")
         compScore++;
         console.log("Computer score: " + compScore + " | Player score: " + playerScore);
     } else {
+        printResult[2]();
         console.log("Computer chose: " + comp);
         console.log("PLAYER WINS!");
         playerScore++;
@@ -84,3 +87,27 @@ function printScore(compScore, playerScore){
     element.innerText = "You: " + playerScore + "  Ash: " + compScore;
     scoreDiv.appendChild(element);
 }
+
+let printResult = [
+    function(){
+        const resultDiv = document.getElementById('finalResult');
+        resultDiv.innerHTML = '';
+        const element = document.createElement('h3');
+        element.innerText = 'TIED!'
+        resultDiv.appendChild(element);
+    },
+    function(){
+        const resultDiv = document.getElementById('finalResult');
+        resultDiv.innerHTML = '';
+        const element = document.createElement('h3');
+        element.innerText = 'ASH WINS!'
+        resultDiv.appendChild(element);
+    },
+    function(){
+        const resultDiv = document.getElementById('finalResult');
+        resultDiv.innerHTML = '';
+        const element = document.createElement('h3');
+        element.innerText = 'YOU WIN!'
+        resultDiv.appendChild(element);
+    }
+]
