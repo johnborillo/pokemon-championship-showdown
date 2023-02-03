@@ -80,11 +80,11 @@ button {
     line-height: 16px;
     margin: auto;
     background: white;
-    border: 1px solid white;
-    box-shadow: 0 1px 0 1px black,
-        inset 0 1px 0 1px black,
-        0 0 0 1px black,
-        inset 0 0 0 1px black;
+    border: 3px solid white;
+    box-shadow: 0 3px 0 2px black,
+        inset 0 2px 0 2px black,
+        0 0 0 2px black,
+        inset 0 0 0 2px black;
 }
 
 .box>i {
