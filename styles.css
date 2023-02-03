@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("/images/forest-background.png") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("./images/forest-background.png") no-repeat;
     /* background-image: url("images/forest-background.png"); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
