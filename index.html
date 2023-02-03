@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>charizard blastoise venusaur!</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 </head>
 <body>
     <script src= "scripts.js"></script>
     <div class="title">
-        <h1>Pokemon Chamionship Showdown!</h1>
+        <h1>Pokémon Chamionship Showdown!</h1>
+        <!-- <h2>Pokémon Chamionship Showdown!</h2> -->
     </div>
     <div class="subTitle">
         <h2>Fire beats Grass | Grass beats Water | Water beats Fire</h2>
@@ -20,6 +22,14 @@
         <div class="venusaurButton"><button onclick="getPlayerChoice(playerChoiceFunctions[2]())"><img src="./images/venusaur.png" /><h1>Venusaur</h1></button></div>
         <div class="blastoiseButton"><button onclick="getPlayerChoice(playerChoiceFunctions[1]())"><img src="./images/blastoise.png" /><h1>Blastoise</h1></button></div>
         <div id="result"></div>
+    </div>
+    <div id="results">
+        <div id="currentRound"><h2>ROUND 0</h2></div>
+        <div class="choices">
+            <div id="playerChoice"></div>
+            <div id="compChoice"></div>
+        </div>
+        <div id="score"></div>
     </div>
 </body>
 </html>
